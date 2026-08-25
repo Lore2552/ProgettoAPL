@@ -1,0 +1,3 @@
+C:/Users/xolor/OneDrive - Università degli Studi di Catania/Università/Magistrale/Advanced Programming Language/Progetto/backend/build/CMakeFiles/backend.dir
+C:/Users/xolor/OneDrive - Università degli Studi di Catania/Università/Magistrale/Advanced Programming Language/Progetto/backend/build/CMakeFiles/edit_cache.dir
+C:/Users/xolor/OneDrive - Università degli Studi di Catania/Università/Magistrale/Advanced Programming Language/Progetto/backend/build/CMakeFiles/rebuild_cache.dir
