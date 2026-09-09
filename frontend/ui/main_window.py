@@ -58,7 +58,7 @@ class MainWindow(QMainWindow):
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
-        # Tab 1: Visualizzatore step-by-step
+        # Tab 1: Visualizzatore 
         self.viz_tab = QWidget()
         viz_layout   = QVBoxLayout(self.viz_tab)
 
@@ -97,17 +97,14 @@ class MainWindow(QMainWindow):
         """Controlla se il middleware è raggiungibile e mostra un avviso se no."""
         if not self.client.health_check():
             self.status.showMessage(
-                "⚠️  Middleware non raggiungibile su http://localhost:8080 — "
+                "Middleware non raggiungibile su http://localhost:8080 — "
                 "avviare middleware.exe prima di usare l'applicazione."
             )
 
     def _show_about(self) -> None:
         QMessageBox.information(
             self,
-            "About APL",
-            "Visualizzatore di Algoritmi — APL Project\n\n"
-            "Frontend: Python + PyQt6 + Matplotlib\n"
-            "Middleware: Go (net/http, goroutine, channels)\n"
-            "Backend: C++ (STL, chrono, RAII)\n\n"
+            "Progetto APL",
+            "Visualizzatore di Algoritmi\n\n"
             "Autori: Pappalardo, Varsallona",
         )

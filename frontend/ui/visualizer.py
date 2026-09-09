@@ -79,7 +79,7 @@ class Visualizer(QWidget):
         self.speed_slider = QSlider(Qt.Orientation.Horizontal)
         self.speed_slider.setRange(10, 1000)  # ms per step
         self.speed_slider.setValue(200)
-        self.speed_slider.setInvertedAppearance(True) # Invertito: slider a dx = più veloce (meno ms)
+        self.speed_slider.setInvertedAppearance(True) 
         self.speed_slider.setFixedWidth(150)
         self.speed_slider.valueChanged.connect(self._on_speed_changed)
         ctrl_layout.addWidget(self.speed_slider)
@@ -122,7 +122,7 @@ class Visualizer(QWidget):
                     w = data[i * n + j]
                     if w > 0:
                         self._nx_graph.add_edge(i, j, weight=w)
-            # Layout fisso (ad es. spring_layout con seed fisso per stabilità)
+            # Layout fisso 
             self._pos = nx.spring_layout(self._nx_graph, seed=42)
             
         self._current_idx = 0
@@ -196,23 +196,27 @@ class Visualizer(QWidget):
             
             # Disegna i pesi sugli archi
             edge_labels = nx.get_edge_attributes(self._nx_graph, 'weight')
-            nx.draw_networkx_edge_labels(self._nx_graph, self._pos, edge_labels=edge_labels, ax=self.ax, font_size=8)
+            nx.draw_networkx_edge_labels(
+                self._nx_graph, 
+                self._pos, 
+                edge_labels=edge_labels, 
+                ax=self.ax, 
+                font_size=8,
+                label_pos=0.3, # Sposta il peso verso il nodo sorgente per evitare accavallamenti
+                bbox=dict(facecolor="white", edgecolor="none", alpha=0.8, pad=0.5)
+            )
             
         else:
             x = range(len(ev.array))
             
-            # Colori: default blu scuro (steelblue), highlight rosso (crimson)
             colors = ['steelblue' if i not in ev.highlight else 'crimson' for i in x]
             
             bars = self.ax.bar(x, ev.array, color=colors, edgecolor='white')
-
-            # Rimuove i bordi del grafico per un look più moderno
             self.ax.spines['top'].set_visible(False)
             self.ax.spines['right'].set_visible(False)
             self.ax.spines['left'].set_visible(False)
-            self.ax.get_yaxis().set_visible(False) # Nasconde asse Y, i valori li mostriamo sulle barre
+            self.ax.get_yaxis().set_visible(False)
 
-            # Aggiunge etichette con il valore sopra le barre se l'array è piccolo
             if len(ev.array) <= 50:
                 for bar in bars:
                     height = bar.get_height()
@@ -280,7 +284,6 @@ class Visualizer(QWidget):
             return
 
         if not self._is_playing:
-            # Se siamo alla fine e premiamo play, ricomincia
             if self._current_idx == len(self._steps) - 1:
                 self._current_idx = 0
                 self._update_ui_for_step()
@@ -305,7 +308,6 @@ class Visualizer(QWidget):
             self._current_idx += 1
             self._update_ui_for_step()
             
-            # Se abbiamo appena raggiunto l'ultimo step, fermiamo l'animazione senza resettare
             if self._current_idx == len(self._steps) - 1:
                 self._is_playing = False
                 self.play_btn.setText("▶ Play")

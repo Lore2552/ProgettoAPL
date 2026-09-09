@@ -153,11 +153,10 @@ class BenchmarkView(QWidget):
         try:
             algos = self.client.list_algorithms()
             for info in algos:
-                # Escludi le ricerche e i grafi dal benchmark per ora
                 if "search" not in info.id and "dijkstra" not in info.id:
                     self.algo_combo.addItem(info.name, userData=info.id)
         except Exception:
-            # Fallback
+            # Fallback, sempre lista statica
             static = [
                 ("bubble_sort",    "Bubble Sort"),
                 ("insertion_sort", "Insertion Sort"),
@@ -243,13 +242,11 @@ class BenchmarkView(QWidget):
         if not self._results:
             return
 
-        # Prepara dati per boxplot (convertiti in ms)
         data = [[x / 1_000_000.0 for x in r.stats.run_times_ns] for r in self._results]
         labels = [f"{r.algorithm}\nN={r.n}" for r in self._results]
 
         bp = self.ax.boxplot(data, tick_labels=labels, patch_artist=True)
         
-        # Colori e stile per renderlo più accattivante
         colors = ['#88c0d0', '#81a1c1', '#5e81ac', '#8fbcbb', '#a3be8c', '#ebcb8b', '#d08770', '#bf616a']
         for i, box in enumerate(bp['boxes']):
             box.set_facecolor(colors[i % len(colors)])

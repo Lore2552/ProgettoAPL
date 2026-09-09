@@ -1,6 +1,5 @@
 """
 Client HTTP per comunicare con il middleware Go.
-Usa il modulo requests come da lezione.
 """
 from __future__ import annotations
 import requests
@@ -21,7 +20,6 @@ class APIClient:
         self.base_url = base_url.rstrip("/")
 
     def _post(self, endpoint: str, payload: dict) -> dict:
-        """Helper interno: esegue una POST e ritorna il JSON della risposta."""
         try:
             resp = requests.post(
                 f"{self.base_url}{endpoint}",
@@ -34,7 +32,6 @@ class APIClient:
             raise ConnectionError(f"Errore comunicazione con il middleware: {e}") from e
 
     def _get(self, endpoint: str) -> dict | list:
-        """Helper interno: esegue una GET e ritorna il JSON della risposta."""
         try:
             resp = requests.get(
                 f"{self.base_url}{endpoint}",
@@ -46,7 +43,7 @@ class APIClient:
             raise ConnectionError(f"Errore comunicazione con il middleware: {e}") from e
 
     # ------------------------------------------------------------------
-    # API pubbliche
+    # API 
     # ------------------------------------------------------------------
 
     def run_algorithm(self,
@@ -59,7 +56,7 @@ class APIClient:
         Args:
             algo:   ID dell'algoritmo (es. "bubble_sort")
             data:   array di interi su cui operare
-            target: elemento da cercare (per search algorithms)
+            target: elemento da cercare (per algoritmi di ricerca)
 
         Returns:
             AlgoResult con la lista completa degli step
@@ -84,7 +81,7 @@ class APIClient:
         """
         payload = {
             "algorithm": algo,
-            "data":      [],   # il backend genera i dati internamente per il benchmark
+            "data":      [],  
             "mode":      "benchmark",
             "n":         n,
             "runs":      runs,
@@ -120,7 +117,7 @@ class APIClient:
         return [AlgorithmInfo.from_dict(d) for d in raw]
 
     def health_check(self) -> bool:
-        """Verifica che il middleware sia raggiungibile. Ritorna True se OK."""
+        """Verifica che il middleware sia raggiungibile. Ritorna True (200) se OK."""
         try:
             resp = requests.get(f"{self.base_url}/api/health", timeout=3)
             return resp.status_code == 200

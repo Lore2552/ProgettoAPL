@@ -13,9 +13,9 @@ import (
 
 func main() {
 	// Parametri configurabili da riga di comando
-	port       := flag.String("port", "8080", "porta del server HTTP")
+	port := flag.String("port", "8080", "porta del server HTTP")
 	backendPath := flag.String("backend", "backend.exe", "percorso dell'eseguibile C++")
-	workers    := flag.Int("workers", 4, "numero di worker goroutine nel pool")
+	workers := flag.Int("workers", 4, "numero di worker goroutine nel pool")
 	flag.Parse()
 
 	// Configura il path del backend C++
@@ -26,8 +26,8 @@ func main() {
 	defer handlers.Pool.Shutdown()
 
 	// Registra le route HTTP
-	http.HandleFunc("/api/run",        handlers.RunAlgorithm)
-	http.HandleFunc("/api/benchmark",  handlers.GetBenchmark)
+	http.HandleFunc("/api/run", handlers.RunAlgorithm)
+	http.HandleFunc("/api/benchmark", handlers.GetBenchmark)
 	http.HandleFunc("/api/benchmark_curve", handlers.GetBenchmarkCurve)
 	http.HandleFunc("/api/algorithms", handlers.ListAlgorithms)
 

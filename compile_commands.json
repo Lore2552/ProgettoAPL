@@ -1,0 +1,38 @@
+[
+  {
+    "directory": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/build",
+    "command": "C:\\Strawberry\\c\\bin\\c++.exe -IC:/Users/xolor/ONEDRI~1/UNIVER~1/MAGIST~1/ADVANC~2/Progetto/backend/include -std=gnu++20 -o CMakeFiles\\backend.dir\\src\\main.cpp.obj -c \"C:\\Users\\xolor\\OneDrive - Universit\u00e0 degli Studi di Catania\\Universit\u00e0\\Magistrale\\Advanced Programming Language\\Progetto\\backend\\src\\main.cpp\"",
+    "file": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/src/main.cpp",
+    "output": "CMakeFiles/backend.dir/src/main.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/build",
+    "command": "C:\\Strawberry\\c\\bin\\c++.exe -IC:/Users/xolor/ONEDRI~1/UNIVER~1/MAGIST~1/ADVANC~2/Progetto/backend/include -std=gnu++20 -o CMakeFiles\\backend.dir\\src\\memory_tracer.cpp.obj -c \"C:\\Users\\xolor\\OneDrive - Universit\u00e0 degli Studi di Catania\\Universit\u00e0\\Magistrale\\Advanced Programming Language\\Progetto\\backend\\src\\memory_tracer.cpp\"",
+    "file": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/src/memory_tracer.cpp",
+    "output": "CMakeFiles/backend.dir/src/memory_tracer.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/build",
+    "command": "C:\\Strawberry\\c\\bin\\c++.exe -IC:/Users/xolor/ONEDRI~1/UNIVER~1/MAGIST~1/ADVANC~2/Progetto/backend/include -std=gnu++20 -o CMakeFiles\\backend.dir\\src\\benchmark.cpp.obj -c \"C:\\Users\\xolor\\OneDrive - Universit\u00e0 degli Studi di Catania\\Universit\u00e0\\Magistrale\\Advanced Programming Language\\Progetto\\backend\\src\\benchmark.cpp\"",
+    "file": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/src/benchmark.cpp",
+    "output": "CMakeFiles/backend.dir/src/benchmark.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/build",
+    "command": "C:\\Strawberry\\c\\bin\\c++.exe -IC:/Users/xolor/ONEDRI~1/UNIVER~1/MAGIST~1/ADVANC~2/Progetto/backend/include -std=gnu++20 -o CMakeFiles\\backend.dir\\src\\algorithms\\sorting.cpp.obj -c \"C:\\Users\\xolor\\OneDrive - Universit\u00e0 degli Studi di Catania\\Universit\u00e0\\Magistrale\\Advanced Programming Language\\Progetto\\backend\\src\\algorithms\\sorting.cpp\"",
+    "file": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/src/algorithms/sorting.cpp",
+    "output": "CMakeFiles/backend.dir/src/algorithms/sorting.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/build",
+    "command": "C:\\Strawberry\\c\\bin\\c++.exe -IC:/Users/xolor/ONEDRI~1/UNIVER~1/MAGIST~1/ADVANC~2/Progetto/backend/include -std=gnu++20 -o CMakeFiles\\backend.dir\\src\\algorithms\\search.cpp.obj -c \"C:\\Users\\xolor\\OneDrive - Universit\u00e0 degli Studi di Catania\\Universit\u00e0\\Magistrale\\Advanced Programming Language\\Progetto\\backend\\src\\algorithms\\search.cpp\"",
+    "file": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/src/algorithms/search.cpp",
+    "output": "CMakeFiles/backend.dir/src/algorithms/search.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/build",
+    "command": "C:\\Strawberry\\c\\bin\\c++.exe -IC:/Users/xolor/ONEDRI~1/UNIVER~1/MAGIST~1/ADVANC~2/Progetto/backend/include -std=gnu++20 -o CMakeFiles\\backend.dir\\src\\algorithms\\graphs.cpp.obj -c \"C:\\Users\\xolor\\OneDrive - Universit\u00e0 degli Studi di Catania\\Universit\u00e0\\Magistrale\\Advanced Programming Language\\Progetto\\backend\\src\\algorithms\\graphs.cpp\"",
+    "file": "C:/Users/xolor/OneDrive - Universit\u00e0 degli Studi di Catania/Universit\u00e0/Magistrale/Advanced Programming Language/Progetto/backend/src/algorithms/graphs.cpp",
+    "output": "CMakeFiles/backend.dir/src/algorithms/graphs.cpp.obj"
+  }
+]

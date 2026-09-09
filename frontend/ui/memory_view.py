@@ -52,8 +52,7 @@ class MemoryView(QWidget):
         if not ev or not ev.memory:
             return
 
-        # Popola Stack (LIFO: l'ultimo aggiunto è in cima alla view)
-        # ev.memory.stack è in ordine di chiamata (il primo è il più vecchio, l'ultimo è il top)
+        # Popola Stack 
         for i, frame in enumerate(reversed(ev.memory.stack)):
             vars_str = ", ".join(f"{k}={v}" for k, v in frame.vars.items())
             text = f"[{frame.name}]  {vars_str}"

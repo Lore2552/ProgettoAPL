@@ -59,7 +59,6 @@ func RunSteps(req models.AlgoRequest) (*models.StepsResponse, error) {
 		return nil, fmt.Errorf("errore parsing risposta steps: %w\nraw: %s", err, string(raw))
 	}
 	if resp.Status != "ok" {
-		// Prova a leggere come ErrorResponse
 		var errResp models.ErrorResponse
 		_ = json.Unmarshal(raw, &errResp)
 		return nil, fmt.Errorf("backend error: %s", errResp.Message)

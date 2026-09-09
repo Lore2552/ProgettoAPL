@@ -144,14 +144,14 @@ func ListAlgorithms(w http.ResponseWriter, r *http.Request) {
 	}
 
 	algorithms := []models.AlgorithmInfo{
-		{ID: "bubble_sort",    Name: "Bubble Sort",    Category: "sorting", TimeComp: "O(n²)",     SpaceComp: "O(1)"},
-		{ID: "insertion_sort", Name: "Insertion Sort", Category: "sorting", TimeComp: "O(n²)",     SpaceComp: "O(1)"},
-		{ID: "selection_sort", Name: "Selection Sort", Category: "sorting", TimeComp: "O(n²)",     SpaceComp: "O(1)"},
-		{ID: "merge_sort",     Name: "Merge Sort",     Category: "sorting", TimeComp: "O(n log n)", SpaceComp: "O(n)"},
-		{ID: "quick_sort",     Name: "Quick Sort",     Category: "sorting", TimeComp: "O(n log n)", SpaceComp: "O(log n)"},
-		{ID: "linear_search",  Name: "Linear Search",  Category: "search",  TimeComp: "O(n)",      SpaceComp: "O(1)"},
-		{ID: "binary_search",  Name: "Binary Search",  Category: "search",  TimeComp: "O(log n)",  SpaceComp: "O(1)"},
-		{ID: "dijkstra",       Name: "Dijkstra (Cammini)", Category: "graphs", TimeComp: "O(V²)", SpaceComp: "O(V)"},
+		{ID: "bubble_sort", Name: "Bubble Sort", Category: "sorting", TimeComp: "O(n²)", SpaceComp: "O(1)"},
+		{ID: "insertion_sort", Name: "Insertion Sort", Category: "sorting", TimeComp: "O(n²)", SpaceComp: "O(1)"},
+		{ID: "selection_sort", Name: "Selection Sort", Category: "sorting", TimeComp: "O(n²)", SpaceComp: "O(1)"},
+		{ID: "merge_sort", Name: "Merge Sort", Category: "sorting", TimeComp: "O(n log n)", SpaceComp: "O(n)"},
+		{ID: "quick_sort", Name: "Quick Sort", Category: "sorting", TimeComp: "O(n log n)", SpaceComp: "O(log n)"},
+		{ID: "linear_search", Name: "Linear Search", Category: "search", TimeComp: "O(n)", SpaceComp: "O(1)"},
+		{ID: "binary_search", Name: "Binary Search", Category: "search", TimeComp: "O(log n)", SpaceComp: "O(1)"},
+		{ID: "dijkstra", Name: "Dijkstra (Cammini)", Category: "graphs", TimeComp: "O(V²)", SpaceComp: "O(V)"},
 	}
 
 	_ = json.NewEncoder(w).Encode(algorithms)

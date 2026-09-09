@@ -17,7 +17,7 @@ from models.types import AlgoResult, AlgorithmInfo
 
 
 class _WorkerThread(QThread):
-    """Thread separato per la chiamata HTTP (non blocca la UI)."""
+    """Thread separato per la chiamata HTTP per evitare di bloccare la UI."""
     finished = pyqtSignal(object)  # AlgoResult
     error    = pyqtSignal(str)
 
@@ -132,7 +132,7 @@ class AlgoPanel(QWidget):
             for info in self.algos:
                 self.algo_combo.addItem(f"{info.name}  [{info.time_complexity}]", userData=info.id)
         except Exception:
-            # Se il middleware non è attivo, popola con una lista statica
+            # Se il middleware non è attivo, popola con una lista statica di algoritmi
             static = [
                 ("bubble_sort",    "Bubble Sort    [O(n²)]"),
                 ("insertion_sort", "Insertion Sort [O(n²)]"),

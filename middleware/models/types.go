@@ -2,17 +2,17 @@ package models
 
 // AlgoRequest rappresenta la richiesta inviata dal frontend al middleware
 type AlgoRequest struct {
-	Algorithm string  `json:"algorithm"`
-	Data      []int   `json:"data"`
-	Mode             string  `json:"mode"`    // "steps" | "benchmark" | "benchmark_curve"
-	Target           int     `json:"target"`  // per search algorithms
-	N                int     `json:"n"`       // per benchmark: dimensione array
-	Runs             int     `json:"runs"`    // per benchmark: numero run (default 30)
-	DataStructure    string  `json:"data_structure"`
-	DataDistribution string  `json:"data_distribution"`
-	StartN           int     `json:"start_n"`
-	EndN             int     `json:"end_n"`
-	StepN            int     `json:"step_n"`
+	Algorithm        string `json:"algorithm"`
+	Data             []int  `json:"data"`
+	Mode             string `json:"mode"`   // "steps" | "benchmark" | "benchmark_curve"
+	Target           int    `json:"target"` // per search algorithms
+	N                int    `json:"n"`      // per benchmark: dimensione array
+	Runs             int    `json:"runs"`   // per benchmark: numero run (default 30)
+	DataStructure    string `json:"data_structure"`
+	DataDistribution string `json:"data_distribution"`
+	StartN           int    `json:"start_n"`
+	EndN             int    `json:"end_n"`
+	StepN            int    `json:"step_n"`
 }
 
 // MemVar rappresenta una variabile locale nello stack frame
@@ -93,9 +93,9 @@ type ErrorResponse struct {
 
 // AlgorithmInfo descrive un algoritmo disponibile
 type AlgorithmInfo struct {
-	ID          string `json:"id"`
-	Name        string `json:"name"`
-	Category    string `json:"category"`
-	TimeComp    string `json:"time_complexity"`
-	SpaceComp   string `json:"space_complexity"`
+	ID        string `json:"id"`
+	Name      string `json:"name"`
+	Category  string `json:"category"`
+	TimeComp  string `json:"time_complexity"`
+	SpaceComp string `json:"space_complexity"`
 }

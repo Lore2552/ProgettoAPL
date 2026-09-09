@@ -1,6 +1,8 @@
 import sys
+import os
 import argparse
 from PyQt6.QtWidgets import QApplication
+from PyQt6.QtGui import QIcon
 from ui.main_window import MainWindow
 
 def main() -> None:
@@ -14,7 +16,11 @@ def main() -> None:
     app = QApplication(sys.argv)
     app.setStyle("Fusion") # Stile pulito cross-platform
     
-    # Crea e mostra la finestra principale
+    # Imposta l'icona se presente
+    icon_path = os.path.join(os.path.dirname(__file__), "icon.png")
+    if os.path.exists(icon_path):
+        app.setWindowIcon(QIcon(icon_path))
+    
     window = MainWindow()
     window.client.base_url = args.middleware.rstrip("/")
     window.show()
