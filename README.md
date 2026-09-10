@@ -17,8 +17,7 @@ Per far funzionare l'intero stack, i 3 componenti devono essere avviati e connes
 
 ### 1. Compilare il Backend (C++)
 
-Se non lo hai già fatto, devi prima compilare l'eseguibile C++.
-> **Nota su Windows (MinGW)**: Se il percorso del tuo progetto contiene caratteri speciali (come la "à" di Università), CMake potrebbe fallire la compilazione. In tal caso, si consiglia di copiare la cartella `backend` in un percorso semplice come `C:\APL_Project\backend` e compilarlo lì.
+Per prima cosa bisogna compilare l'eseguibile C++.
 
 ```bash
 cd backend
@@ -31,32 +30,29 @@ L'eseguibile sarà generato in `backend/build/backend.exe`.
 
 ### 2. Avviare il Middleware (Go)
 
-Il middleware farà da ponte tra il frontend e il backend. Devi fornirgli il percorso esatto dell'eseguibile C++ appena compilato.
+Il middleware farà da ponte tra il frontend e il backend. Bisogna fornirgli il percorso esatto dell'eseguibile C++ appena compilato.
 
-Apri un terminale (lascialo aperto in background):
+Da un terminale aperto in backgruond:
+
 ```bash
 cd middleware
-# Esegui il server Go indicando dove si trova l'eseguibile C++
 go run main.go -backend "..\backend\build\backend.exe"
 ```
-*(Se hai compilato il backend in `C:\APL_Project`, usa `-backend "C:\APL_Project\backend\build\backend.exe"`)*
 
 Il server si avvierà in ascolto sulla porta `8080`.
 
 ### 3. Avviare il Frontend GUI (Python)
 
-Infine, con il middleware Go in esecuzione, puoi avviare l'interfaccia utente.
+Infine, con il middleware Go in esecuzione, bisogna avviare l'interfaccia utente.
 
-Apri un nuovo terminale (separato da quello di Go):
+Da un nuovo terminale (separato da quello di Go):
 ```bash
 cd frontend
-# Installa le dipendenze se non l'hai già fatto
 pip install PyQt6 matplotlib requests
-# Avvia la GUI
 python main.py
 ```
 
-Si aprirà la finestra PyQt6 dell'applicazione.
+Si aprirà la finestra dell'applicazione.
 
 ---
 
@@ -65,14 +61,15 @@ Si aprirà la finestra PyQt6 dell'applicazione.
 L'interfaccia ha due tab principali:
 
 1. **Visualizzatore**:
-   - Scegli un algoritmo dal menu a tendina.
-   - Scegli la grandezza $N$ o inserisci manualmente un array diviso da virgole.
-   - Clicca "Avvia Visualizzazione".
-   - Usa i tasti Play/Pausa e lo slider della velocità per vedere l'avanzamento dell'algoritmo nel grafico a barre animato.
-   - In basso, osserva come lo **Stack** (chiamate di funzione) e l'**Heap** (allocazioni di memoria) si comportano in tempo reale (particolarmente evidente in algoritmi ricorsivi come MergeSort o QuickSort).
+   - Permette di scegliere un algoritmo dal menu a tendina.
+   - Permette di scegliere la grandezza $N$ o di inserire manualmente un array diviso da virgole.
+   - Una volta settati questi campi si può procedere con cliccare "Avvia Visualizzazione".
+   - Si possono usarre i tasti Play/Pausa e lo slider della velocità per vedere l'avanzamento dell'algoritmo nel grafico.
+   - In basso invece si può osservare come lo **Stack** e l'**Heap** si comportano in tempo reale (particolarmente interessante negli algoritmi ricorsivi come MergeSort o QuickSort).
 
 2. **Benchmark**:
-   - Vai nel secondo tab per lanciare misurazioni di performance.
-   - Scegli un algoritmo e quanti "Run" effettuare (default: 30).
-   - Il middleware avvierà i run garantendo isolamento in sequenza (per evitare fluttuazioni da scheduling del S.O.).
-   - Al termine, potrai osservare un **Boxplot** delle performance e una tabella dettagliata con i valori dei quartili, della media e della mediana.
+   - Andando nel secondo tab si possono lanciare misurazioni di performance.
+   - Si può scegliere un algoritmo e quanti "Run" effettuare (default: 30). 
+   - Inoltre è possibile scegliere la distribuzione dell'array iniziale e la struttura da analizzare (array stack o heap).
+   - Il middleware avvierà i run garantendo isolamento in sequenza.
+   - Al termine, si potrà osservare un **Boxplot** delle performance e una tabella dettagliata con i valori dei quartili, della media e della mediana.
