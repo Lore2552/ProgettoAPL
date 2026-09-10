@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\backend.dir/objects.a
-C:\Users\paola\mingw64\mingw64\bin\ar.exe qc CMakeFiles\backend.dir/objects.a @CMakeFiles\backend.dir\objects1.rsp
-C:\Users\paola\mingw64\mingw64\bin\c++.exe -O3 -DNDEBUG -static -Wl,--whole-archive CMakeFiles\backend.dir/objects.a -Wl,--no-whole-archive -o backend.exe -Wl,--out-implib,libbackend.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\backend.dir\linkLibs.rsp
