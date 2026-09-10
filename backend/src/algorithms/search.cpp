@@ -3,7 +3,7 @@
 #include <string>
 
 // -----------------------------------------------------------------------
-// Helper locale (reusa emitStep di sorting.cpp ma ridefinita qui)
+// Helper locale (reusa emitStep di sorting.cpp ma lho ridefinita qui)
 // -----------------------------------------------------------------------
 
 static void emitSearchStep(int& stepCount, int& comparisons,
@@ -87,13 +87,13 @@ int binarySearch(const std::vector<int>& arr, int target,
             hi = mid - 1;
         }
     }
-    emitSearchStep(step, cmp, arr, {}, mem, cb); // non trovato
+    emitSearchStep(step, cmp, arr, {}, mem, cb); 
     mem.popFrame();
     return -1;
 }
 
 // =======================================================================
-// VERSIONI PURE PER BENCHMARK (Nessun overhead)
+// VERSIONI PURE PER BENCHMARK 
 // =======================================================================
 
 int linearSearchBench(const int* arr, int n, int target) {

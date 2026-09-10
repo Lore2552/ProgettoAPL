@@ -75,7 +75,7 @@ void insertionSort(std::vector<int>& arr, MemoryTracer& mem, StepCallback cb) {
             mem.updateFrame({{"j", std::to_string(j)}});
             emitStep(step, cmp, swp, arr, {j + 1, j + 2}, mem, cb);
         }
-        ++cmp; // l'ultimo confronto (falso)
+        ++cmp; // l'ultimo confronto 
         arr[j + 1] = key;
         emitStep(step, cmp, swp, arr, {j + 1}, mem, cb);
     }
@@ -247,7 +247,7 @@ void quickSort(std::vector<int>& arr, MemoryTracer& mem, StepCallback cb) {
 }
 
 // =======================================================================
-// VERSIONI PURE PER BENCHMARK (Nessun overhead)
+// VERSIONI PURE PER BENCHMARK 
 // =======================================================================
 
 void bubbleSortBench(int* arr, int n) {

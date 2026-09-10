@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         self._build_tabs()
         self._build_status_bar()
 
-        # Controlla subito se il middleware è attivo
+        # Controlla se il middleware è attivo
         self._check_middleware()
 
     # ------------------------------------------------------------------

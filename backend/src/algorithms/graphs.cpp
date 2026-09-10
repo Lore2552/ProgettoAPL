@@ -59,9 +59,6 @@ void dijkstra(const std::vector<int>& adj_matrix, int start_node, MemoryTracer& 
             // Aggiorna stack frame con le variabili chiave
             mem.popFrame();
             mem.pushFrame("dijkstra");
-            // Aggiungiamo hack: la MemoryTracer non permette di aggiornare facilmente,
-            // quindi facciamo un pop e push. Omettiamo per semplicità le variabili locali nel frame.
-            
             ev.memory = mem.snapshot();
             cb(ev);
         }

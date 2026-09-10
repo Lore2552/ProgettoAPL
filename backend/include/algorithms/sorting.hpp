@@ -31,7 +31,7 @@ void selectionSort(std::vector<int> &arr, MemoryTracer &mem, StepCallback cb);
 void mergeSort(std::vector<int> &arr, MemoryTracer &mem, StepCallback cb);
 void quickSort(std::vector<int> &arr, MemoryTracer &mem, StepCallback cb);
 
-// Versioni Pure (no overhead) per i Benchmark
+// Versioni Pure per i Benchmark
 void bubbleSortBench(int *arr, int n);
 void insertionSortBench(int *arr, int n);
 void selectionSortBench(int *arr, int n);

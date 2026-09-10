@@ -1,6 +1,6 @@
 """
 Modelli dati per la comunicazione con il middleware Go.
-Usa @dataclass per una struttura chiara e type hints come da lezione.
+
 """
 from __future__ import annotations
 from dataclasses import dataclass, field

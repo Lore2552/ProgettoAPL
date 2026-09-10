@@ -18,7 +18,7 @@ class MemoryView(QWidget):
     """
     def __init__(self, parent: QWidget | None = None) -> None:
         super().__init__(parent)
-        self.setFixedHeight(200) # Altezza fissa in basso
+        self.setFixedHeight(200) 
         self._build_ui()
 
     def _build_ui(self) -> None:
@@ -60,7 +60,7 @@ class MemoryView(QWidget):
             
             # Evidenzia il top dello stack (il frame corrente attivo)
             if i == 0:
-                item.setBackground(QColor("#e8f4f8")) # Azzurrino chiaro
+                item.setBackground(QColor("#e8f4f8")) 
                 item.setForeground(QColor("black"))
                 font = item.font()
                 font.setBold(True)
@@ -77,7 +77,7 @@ class MemoryView(QWidget):
             if block.content:
                 text += f" -> {block.content}"
             item = QListWidgetItem(text)
-            item.setBackground(QColor("#fcf5e3")) # Giallo chiaro
+            item.setBackground(QColor("#fcf5e3")) 
             item.setForeground(QColor("black"))
             self.heap_list.addItem(item)
 
