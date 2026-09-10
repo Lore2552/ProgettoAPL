@@ -36,7 +36,6 @@ BenchmarkResult Benchmarker::run(const std::string &algoName,
       t1 = std::chrono::high_resolution_clock::now();
       delete[] arr;
     } else if (dataStructure == "stack") {
-      // VLA non è standard C++; usiamo std::vector ma misuriamo solo l'algoritmo
       std::vector<int> stackSim(data);
       int *arr = stackSim.data();
       t0 = std::chrono::high_resolution_clock::now();
