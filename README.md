@@ -60,7 +60,7 @@ L'interfaccia ha due tab principali:
 
 1. **Visualizzatore**:
    - Permette di scegliere un algoritmo dal menu a tendina.
-   - Permette di scegliere la grandezza $N$ o di inserire manualmente un array diviso da virgole.
+   - Permette di scegliere la grandezza $N$ e generare un array casuale all'avvio (in questo caso l'array generato sarà visualizzabile solo dopo l'avvio), oppure di inserire manualmente un array diviso da virgole, oppure di generare un array casuale e visualizzarlo prima dell'avvio (utile nei casi di algoritmi di ricerca, in cui bisogna specificare l'elemento target da ricercare prima dell'avvio).
    - Una volta settati questi campi si può procedere con cliccare "Avvia Visualizzazione".
    - Si possono usarre i tasti Play/Pausa e lo slider della velocità per vedere l'avanzamento dell'algoritmo nel grafico.
    - In basso invece si può osservare come lo **Stack** e l'**Heap** si comportano in tempo reale (particolarmente interessante negli algoritmi ricorsivi come MergeSort o QuickSort).
