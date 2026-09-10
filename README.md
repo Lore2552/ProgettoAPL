@@ -21,9 +21,7 @@ Per prima cosa bisogna compilare l'eseguibile C++.
 
 ```bash
 cd backend
-# Genera i file di build
 cmake -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
-# Compila il progetto
 cmake --build build
 ```
 L'eseguibile sarà generato in `backend/build/backend.exe`.
